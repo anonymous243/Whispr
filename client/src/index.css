@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    
+    --primary: 207 82% 52%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 173 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 50%;
+    
+    --accent: 262 73% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 62%;
+    
+    --radius: 0.5rem;
+
+    /* Custom colors for app */
+    --lightGray: 0 0% 96%;
+    --mediumGray: 0 0% 88%;
+    --darkGray: 0 0% 62%;
+    --charcoal: 0 0% 38%;
+    --almostBlack: 0 0% 13%;
+    
+    /* Additional colors for success, warning */
+    --success: 122 39% 49%;
+    --warning: 45 100% 51%;
+    --error: 4 90% 58%;
+  }
+
+  .dark {
+    --background: 0 0% 13%;
+    --foreground: 0 0% 97%;
+    
+    --card: 0 0% 18%;
+    --card-foreground: 0 0% 97%;
+    
+    --popover: 0 0% 18%;
+    --popover-foreground: 0 0% 97%;
+    
+    --primary: 207 82% 52%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 173 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 62%;
+    
+    --accent: 262 73% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 0 0% 50%;
+    
+    /* Custom colors for app - dark mode */
+    --lightGray: 0 0% 20%;
+    --mediumGray: 0 0% 30%;
+    --darkGray: 0 0% 50%;
+    --charcoal: 0 0% 70%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans bg-background text-foreground antialiased h-screen overflow-hidden;
+  }
+}
+
+/* Custom utility classes */
+.bg-lightGray {
+  background-color: hsl(var(--lightGray));
+}
+.bg-mediumGray {
+  background-color: hsl(var(--mediumGray));
+}
+.bg-darkGray {
+  background-color: hsl(var(--darkGray));
+}
+.bg-charcoal {
+  background-color: hsl(var(--charcoal));
+}
+.bg-almostBlack {
+  background-color: hsl(var(--almostBlack));
+}
+.bg-success {
+  background-color: hsl(var(--success));
+}
+.bg-warning {
+  background-color: hsl(var(--warning));
+}
+.bg-error {
+  background-color: hsl(var(--error));
+}
+
+.text-charcoal {
+  color: hsl(var(--charcoal));
+}
+.text-darkGray {
+  color: hsl(var(--darkGray));
+}
+.text-success {
+  color: hsl(var(--success));
+}
+.text-warning {
+  color: hsl(var(--warning));
+}
+.text-error {
+  color: hsl(var(--error));
+}
+
+/* Chat bubbles */
+.chat-bubble-sent {
+  background-color: hsl(210 100% 97%);
+  border-radius: 18px 18px 0 18px;
+}
+.chat-bubble-received {
+  background-color: white;
+  border-radius: 18px 18px 18px 0;
+}
+
+/* Hide scrollbars but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
